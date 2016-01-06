@@ -42,7 +42,6 @@ static struct intel_mid_ssp_spi_chip chip = {
 
 static void tng_ssp_spi_cs_control(u32 command)
 {
-        pr_debug("mcp251x: setting CS0 line to %d\n", (command != 0) ? 1 : 0);
 	gpio_set_value(tng_ssp_spi2_CS0_gpio, (command != 0) ? 1 : 0);
 }
 
